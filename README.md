@@ -11,14 +11,11 @@ Running Configuration
 3. Run email_send.py, please set csv file path correctly.
 4. In email_send.py, I used SendCoud email API to send target emails. You need to have your name and email address in this function. 
     
-    send_email('your_name', 'email_address')
-
-	
-	For example:
-	
+    
          save_path = '/Users/dangchong/Desktop/coding_task'
          work_path = '/Users/dangchong/Desktop/coding_task'
          file_path = "/Users/dangchong/Desktop/coding_task/event.csv"
+         send_email('your_name', 'email_address')
 		 
 You can use SQLite to open the event.db file, also you can write SQL queries in it.
 
