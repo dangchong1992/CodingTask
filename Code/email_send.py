@@ -5,7 +5,7 @@ import requests
 import json
 
 # set your attachment path
-file_path = "/Users/dangchong/Desktop/coding_task/event.csv"
+file_path = "/Users/dangchong/Documents/Github/CodingTask/Code/event.csv"
 
 url = "http://api.sendcloud.net/apiv2/mail/sendtemplate"
 API_USER = 'junengpin_test_ZI48jr'
