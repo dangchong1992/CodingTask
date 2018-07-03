@@ -19,7 +19,8 @@ c = conn.cursor()
 
 # create a table and save it in the database
 c.execute(""" CREATE TABLE event 
-                                    (id,
+                                    (pd_index,
+                                    id,
                                     title,
                                     description,
                                     link,
@@ -34,7 +35,8 @@ c.execute(""" CREATE TABLE event
 
 # event data path
 csvfile = open(data_path, 'rU')
-fieldnames = ['id',
+fieldnames = ['pd_index',
+              'id',
               'title',
               'description',
               'link',
@@ -47,8 +49,10 @@ fieldnames = ['id',
               'sources_id',
               'sources_url']
 reader = csv.DictReader(csvfile, fieldnames=fieldnames)
+next(reader)
 for row in reader:
-    c.execute("INSERT INTO event(id, "
+    c.execute("INSERT INTO event(pd_index, "
+              "id, "
               "title, "
               "description, "
               "link, "
@@ -59,8 +63,9 @@ for row in reader:
               "geometries_type, "
               "sources_id, "
               "sources_url) "
-              "VALUES (?,?,?,?,?,?,?,?,?,?,?);",
-              (row['id'],
+              "VALUES (?,?,?,?,?,?,?,?,?,?,?,?);",
+              (row['pd_index'],
+               row['id'],
                row['title'],
                row['description'],
                row['link'],
