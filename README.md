@@ -11,9 +11,11 @@ Running Configuration
 3. Run email_send.py, please set csv file path correctly.
 	
 	For example:
+	
          save_path = '/Users/dangchong/Desktop/coding_task'
          work_path = '/Users/dangchong/Desktop/coding_task'
          file_path = "/Users/dangchong/Desktop/coding_task/event.csv"
+		 
 You can use SQLite to open the event.db file, also you can write SQL queries in it.
 
 If comes error like  "table event already exists", delete that file and run again.
